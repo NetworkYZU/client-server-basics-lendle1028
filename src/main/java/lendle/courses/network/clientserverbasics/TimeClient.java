@@ -20,8 +20,11 @@ public class TimeClient {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        Socket socket=new Socket("time.nist.gov", 13);
-        InputStream input=socket.getInputStream();
+        //hint: 建立 Socket 物件，並且取得 input stream 儲存在 input 變數中
+        Socket socket=null;
+        InputStream input=null;
+        /////////////////////////////////////////////////////////////
+        
         StringBuilder builder=new StringBuilder();
         InputStreamReader reader=new InputStreamReader(input);
         for(int c=reader.read(); c!=-1; c=reader.read()){

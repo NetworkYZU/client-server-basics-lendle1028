@@ -28,7 +28,7 @@ public class DictClient {
         socket.setSoTimeout(15000);
         //hint: 從 socket 取得 OutputStream
         OutputStream out = null;
-        ///////////////////////////////////
+        ////////////////////////////////////////////
         Writer writer = new OutputStreamWriter(out, "UTF-8");
         //hint: 輸出 DEFINE wn gold\r\n
         writer.write("");

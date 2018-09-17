@@ -11,7 +11,7 @@ import java.net.Socket;
 
 /**
  *
- * @author lendle lendle1028
+ * @author lendle
  */
 public class TimeClient {
 
@@ -21,12 +21,12 @@ public class TimeClient {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         //hint: 建立 Socket 物件，並且取得 input stream 儲存在 input 變數中
-        Socket socket=new Socket("time.nist.gov", 13);
-        InputStream input=socket.getInputStream();
+        Socket socket=null;
+        InputStream input=null;
         /////////////////////////////////////////////////////////////
         
         StringBuilder builder=new StringBuilder();
-        InputStreamReader reader=new InputStreamReader(input, "utf-8");
+        InputStreamReader reader=new InputStreamReader(input);
         for(int c=reader.read(); c!=-1; c=reader.read()){
             builder.append((char)c);
         }

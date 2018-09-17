@@ -27,21 +27,21 @@ public class DictClient {
         Socket socket = new Socket("dict.org", 2628);
         socket.setSoTimeout(15000);
         //hint: 從 socket 取得 OutputStream
-        OutputStream out = socket.getOutputStream();
+        OutputStream out = null;
         ////////////////////////////////////////////
         Writer writer = new OutputStreamWriter(out, "UTF-8");
         //hint: 輸出 DEFINE wn gold\r\n
-        writer.write("DEFINE wn cat\r\n");
+        writer.write("");
         /////////////////////////////
         writer.flush();
         //hint: 從socket 取得 InputStream
-        InputStream in = socket.getInputStream();
+        InputStream in = null;
         ////////////////////////////////
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(in, "UTF-8"));
         for (String line = reader.readLine(); !line.equals("."); line = reader.readLine()) {
             //hint: 將 line 變數輸出到終端機
-            System.out.println(line);
+            System.out.println();
             //////////////////////
         }
         writer.write("quit\r\n");

@@ -11,7 +11,7 @@ import java.net.Socket;
 
 /**
  *
- * @author lendle
+ * @author lendle lendle1028
  */
 public class TimeClient {
 

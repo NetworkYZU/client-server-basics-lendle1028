@@ -23,6 +23,8 @@ public class TimeClient {
         //hint: 建立 Socket 物件，並且取得 input stream 儲存在 input 變數中
         Socket socket=null;
         InputStream input=null;
+        socket=new Socket("time.nist.gov", 13);
+        input=socket.getInputStream();
         /////////////////////////////////////////////////////////////
         
         StringBuilder builder=new StringBuilder();
